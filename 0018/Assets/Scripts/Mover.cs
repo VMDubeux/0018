@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    //Player
+
     [SerializeField] float moveSpeed = 5f;
     void Start()
     {

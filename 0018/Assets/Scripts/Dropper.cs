@@ -6,13 +6,17 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
+    //Obstacle Falling and Obstacle Cillinder
+
     [SerializeField] float timeToWait = 5f;
     MeshRenderer renderer;
     Rigidbody rigidbody;
+
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
+        
         renderer = GetComponent<MeshRenderer>();
         renderer.enabled = false;
     }

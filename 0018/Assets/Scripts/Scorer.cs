@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
+    //Player
+
     int hits = 0;
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collided)
     {
-        hits++;
-        Debug.Log($"You've bumped into a thing this many times: {hits}");
+        if (collided.gameObject.tag == "Unhitted")
+        {
+            hits++;
+            Debug.Log($"You've bumped into a thing this many times: {hits}");
+        }
     }
 }
